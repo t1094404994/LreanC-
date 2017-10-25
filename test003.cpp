@@ -10,10 +10,19 @@ int countOnes(unsigned int n){
     }
     return ones;
 }
+//计算2^n
+int pow2N(int n){
+    int pow=1;
+    while(0<n--){
+        pow<<=1;
+    }
+    return pow;
+}
 int main(){
     int n;
     cin>>n;
-    cout<<countOnes(n)<<endl;
+    //cout<<countOnes(n)<<endl;
+    cout<<pow2N(n)<<endl;
     system("pause");
     return 0;
 }
