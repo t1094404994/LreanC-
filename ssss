@@ -1,0 +1,43 @@
+[1mdiff --git a/a.exe b/a.exe[m
+[1mindex 03a00b3..32d50f1 100644[m
+Binary files a/a.exe and b/a.exe differ
+[1mdiff --git a/hanruota.cpp b/hanruota.cpp[m
+[1mindex 462daeb..b621066 100644[m
+[1m--- a/hanruota.cpp[m
+[1m+++ b/hanruota.cpp[m
+[36m@@ -1,20 +1,21 @@[m
+ #include<iostream>[m
+ #include<vector>[m
+ using namespace std;[m
+[31m-int main(){[m
+[31m-    //计算汉诺塔的移动次数[m
+[31m-    /*汉诺塔游戏的数学语言:[m
+[31m-      1.有三个特殊的容器 其中一个容器A是由P1,P2...P64的这些元素组成,其余两个B,C是空的[m
+[31m-      2.规则有: 容器之间一次只能移动第一个元素[m
+[31m-               容器里的元素必须大的在后[m
+[31m-      3.目的:将容器A中的元素移动到B中         [m
+[31m-    */[m
+[31m-    vector<int> A(64);[m
+[31m-    vector<int> B,C;[m
+[31m-    for(int i=0;i<64;i++){[m
+[31m-        A[i]=i;[m
+[32m+[m[32mclass Father{[m
+[32m+[m[32mpublic:[m
+[32m+[m[32m    virtual void testf(){[m
+[32m+[m[32m        cout<<"this is father's funtion"<<endl;[m
+[32m+[m[32m    }[m
+[32m+[m[32m};[m
+[32m+[m[32mclass Son:public Father{[m
+[32m+[m[32mpublic:[m
+[32m+[m[32m    void testf(){[m
+[32m+[m[32m        cout<<"this is son's funtion"<<endl;[m
+     }[m
+[31m-    int num=0;[m
+[32m+[m[32m};[m
+[32m+[m[32mint main(){[m
+[32m+[m[32m    Son son;[m
+[32m+[m[32m    son.testf();[m
+     system("pause");[m
+     return 0;[m
+ }[m
+\ No newline at end of file[m
