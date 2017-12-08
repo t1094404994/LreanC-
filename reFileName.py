@@ -13,14 +13,21 @@ def rename(path):
     num=0
     if len(f)>0:
         for i in f:
-            if str(f[n]).find('die')!=-1: #查找
-                f2=os.listdir(path+"die")
+            if str(f[n]).find('attact')!=-1: #查找
+                f2=os.listdir(path+"attact")
                 f2.sort(key=len)
+                name=len(f2)/5
                 n2=0
+                n3=0
+                n4=0
                 for j in f2:
-                    oldName=path+"die\\"+f2[n2]
-                    newName=path+"die\\"+'die_0_'+str(n2)+'.png'
+                    oldName=path+"attact\\"+f2[n2]
+                    newName=path+"attact\\"+'attact_'+str(n4)+'_'+str(n3)+'.png'
                     n2=n2+1
+                    n3=n3+1
+                    if n3==name:
+                        n3=0
+                        n4=n4+1
                     os.rename(oldName,newName)
                     print(oldName+'>>>>>'+newName)
             else:
@@ -34,5 +41,4 @@ def rename(path):
         rename(input("cin path\n"))
 if __name__=="__main__": #main入口
     rename(input("Cin Path\n"))
-		
-    
+        
