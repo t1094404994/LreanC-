@@ -2,26 +2,29 @@
 #include<string>
 #include<vector>
 using namespace std;
-/*KMP算法基于暴力匹配算法
-**通过next[]跳转就是KMP算法的核心    
-*/
-/** NEXT对照*/
-void NEXT(const string &T, vector<int>&next){
-    next[0]=-1;
-    for(int i=1;i<T.size();i++){
-       int j=next[i-1];
-       int c=0;
-       while(c<=i){
-        if(T[c+j]==T[T.size()-c-j-1]){
-            next[i]=next[i-1]+1;
-        }else{
-            next[i]=next[i]
-        }   
-        c++;
-       }
+/** 原始匹配字符算法 时间复杂度0(m*n)**/
+void matchStr(string &S,string &T){
+    int n=0; 
+    for(int i=0;i<S.size();i++){
+        for(int j=0;j<T.size();j++){
+            if(S[n]==T[j]){
+                n++;
+            }else{
+                n=i+1;
+                break;
+            }
+            if(j==T.size()-1){
+                n=i+1;
+                cout<<i<<endl;
+            }
+        }
     }
 }
+/** KMP算法 时间复杂度0(m+n)*/
 int main(){
+    string S="asddsdjdhsdfsdsdfs";
+    string T="sd";
+    matchStr(S,T);
     system("pause");
     return 0;
 }

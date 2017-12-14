@@ -13,16 +13,16 @@ def rename(path):
     num=0
     if len(f)>0:
         for i in f:
-            if str(f[n]).find('attact')!=-1: #查找
-                f2=os.listdir(path+"attact")
+            if str(f[n]).find('die')!=-1: #查找
+                f2=os.listdir(path+"die")
                 f2.sort(key=len)
                 name=len(f2)/5
                 n2=0
                 n3=0
                 n4=0
                 for j in f2:
-                    oldName=path+"attact\\"+f2[n2]
-                    newName=path+"attact\\"+'attact_'+str(n4)+'_'+str(n3)+'.png'
+                    oldName=path+"die\\"+f2[n2]
+                    newName=path+"die\\"+'die_'+str(n4)+'_'+str(n3)+'.png'
                     n2=n2+1
                     n3=n3+1
                     if n3==name:
