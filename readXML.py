@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+#写入新节点
 def TestMiniDom():  
   from xml.dom import minidom
   #from htmllib import HTMLParser  
