@@ -4,7 +4,7 @@
 #"\\"表示不把‘\’字符转义
 import os
 import sys
-fintStr=["stand","run","attact","die","skill"]
+fintStr=["stand","run","attact1","attact2","attact3","die","skill"]#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 def rename(path):
     f=os.listdir(path) #获取路径的所有文件名
     f.sort(key=len) #按数字大小排序
@@ -21,10 +21,10 @@ def rename(path):
                     name=len(f2)/5
                     n2=0
                     n3=0
-                    n4=0
+                    n4=0 #注意顺序
                     for j in f2:
                         oldName=path+k+"\\"+f2[n2]
-                        newName=path+k+"\\"+k+str(n4)+str(n3)+'.png'
+                        newName=path+k+"\\"+k+'_'+str(n4)+'_'+str(n3)+'.png'
                         n2=n2+1
                         n3=n3+1
                         if n3==name:
